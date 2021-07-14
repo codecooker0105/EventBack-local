@@ -22,41 +22,41 @@ const EventIncludes = [
 		attributes: [ 'id', 'first_name', 'last_name', 'photo' ],
 	},
 	{
-    model: models.Comment,
-    attributes: ['id', 'relation_id', 'text', 'user_id', 'createdAt', 'updatedAt'],
-		as: 'comments',
-		required: false,
-		where: {
-			type: 0
-		},
-    include: [
-      {
-        model: models.User,
-        attributes: ['id', 'first_name', 'last_name', 'photo'],
-        as: 'user'
+		model: models.Comment,
+		attributes: ['id', 'relation_id', 'text', 'user_id', 'createdAt', 'updatedAt'],
+			as: 'comments',
+			required: false,
+			where: {
+				type: 0
+			},
+		include: [
+			{
+				model: models.User,
+				attributes: ['id', 'first_name', 'last_name', 'photo'],
+				as: 'user'
 			}
-    ]
+		]
 	},
 	{
-    model: models.Reaction,
-    attributes: ['user_id'],
-    required: false,
-    where: {
-      type: 0,
-      value: 1
-    },
-    as: 'likes'
-  },
-  {
-    model: models.Reaction,
-    attributes: ['user_id'],
-    required: false,
-    where: {
-      type: 0,
-      value: 2
-    },
-    as: 'dislikes'
-  }
+		model: models.Reaction,
+		attributes: ['user_id'],
+		required: false,
+		where: {
+			type: 0,
+			value: 1
+		},
+		as: 'likes'
+	},
+	{
+		model: models.Reaction,
+		attributes: ['user_id'],
+		required: false,
+		where: {
+			type: 0,
+			value: 2
+		},
+		as: 'dislikes'
+	}
 ]
 
 router.get('/public', async (req, res) => {
