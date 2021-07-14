@@ -1,0 +1,9 @@
+{
+	"apps" : [{
+		"name"      : "Eventree-BE",
+		"script"    : "./build/index.js",
+		"env": {
+			"ENVIRONMENT": "production"
+		}
+	}]
+}
