@@ -12,14 +12,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/EnjoyTechUSA/EventBack.git"
+    "url": "git+https://github.com/codecooker0105/EventBack-local.git"
   },
   "author": "Sugarman",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/EnjoyTechUSA/EventBack/issues"
+    "url": "https://github.com/codecooker0105/EventBack-local/issues"
   },
-  "homepage": "https://github.com/EnjoyTechUSA/EventBack#readme",
+  "homepage": "https://github.com/codecooker0105/EventBack-local#readme",
   "dependencies": {
     "@babel/runtime": "^7.8.3",
     "@hapi/joi": "^16.1.5",
